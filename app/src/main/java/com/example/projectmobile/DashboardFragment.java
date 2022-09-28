@@ -1,6 +1,5 @@
 package com.example.projectmobile;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.projectmobile.databinding.FragmentLoginBinding;
+import com.example.projectmobile.databinding.FragmentDashboardBinding;
 
-public class LoginFragment extends Fragment {
+public class DashboardFragment extends Fragment {
 
-    private FragmentLoginBinding binding;
+    private FragmentDashboardBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +21,7 @@ public class LoginFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentLoginBinding.inflate(inflater, container, false);
+        binding = FragmentDashboardBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -30,19 +29,11 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.registerButton.setOnClickListener(new View.OnClickListener() {
+        binding.waterTrackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(LoginFragment.this)
-                        .navigate(R.id.action_LoginFragment_to_RegisterFragment);
-            }
-        });
-
-        binding.loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
+                NavHostFragment.findNavController(DashboardFragment.this)
+                        .navigate(R.id.action_DashboardFragment_to_WaterTrackFragment);
             }
         });
     }

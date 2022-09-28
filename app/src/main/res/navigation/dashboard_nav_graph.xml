@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_nav_graph"
+    app:startDestination="@id/DashboardFragment">
+
+    <fragment
+        android:id="@+id/DashboardFragment"
+        android:name="com.example.projectmobile.DashboardFragment"
+        android:label="@string/dashboard_label"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_DashboardFragment_to_WaterTrackFragment"
+            app:destination="@id/WaterTrackFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WaterTrackFragment"
+        android:name="com.example.projectmobile.WaterTrackFragment"
+        android:label="@string/water_track_label"
+        tools:layout="@layout/fragment_water_track">
+
+        <action
+            android:id="@+id/action_WaterTrackFragment_to_DashboardFragment"
+            app:destination="@id/DashboardFragment" />
+    </fragment>
+</navigation>
