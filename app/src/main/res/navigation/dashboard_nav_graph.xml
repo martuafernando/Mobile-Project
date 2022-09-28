@@ -18,6 +18,10 @@
         <action
             android:id="@+id/action_DashboardFragment_to_WaterTrackFragment"
             app:destination="@id/WaterTrackFragment" />
+
+        <action
+            android:id="@+id/action_DashboardFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
     </fragment>
 
     <fragment
@@ -32,5 +36,12 @@
         android:name="com.example.projectmobile.WaterTrackFragment"
         android:label="@string/water_track_label"
         tools:layout="@layout/fragment_water_track">
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.example.projectmobile.SettingsFragment"
+        android:label="@string/settings_label"
+        tools:layout="@layout/fragment_settings">
     </fragment>
 </navigation>
