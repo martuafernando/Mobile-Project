@@ -12,8 +12,19 @@
         tools:layout="@layout/fragment_dashboard">
 
         <action
+            android:id="@+id/action_DashboardFragment_to_TaskManagementFragment"
+            app:destination="@id/TaskManagementFragment" />
+
+        <action
             android:id="@+id/action_DashboardFragment_to_WaterTrackFragment"
             app:destination="@id/WaterTrackFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TaskManagementFragment"
+        android:name="com.example.projectmobile.TaskManagementFragment"
+        android:label="@string/task_track_label"
+        tools:layout="@layout/fragment_task_management">
     </fragment>
 
     <fragment
@@ -21,9 +32,5 @@
         android:name="com.example.projectmobile.WaterTrackFragment"
         android:label="@string/water_track_label"
         tools:layout="@layout/fragment_water_track">
-
-        <action
-            android:id="@+id/action_WaterTrackFragment_to_DashboardFragment"
-            app:destination="@id/DashboardFragment" />
     </fragment>
 </navigation>

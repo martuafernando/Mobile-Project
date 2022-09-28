@@ -29,6 +29,14 @@ public class DashboardFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.taskManagementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(DashboardFragment.this)
+                        .navigate(R.id.action_DashboardFragment_to_TaskManagementFragment);
+            }
+        });
+
         binding.waterTrackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
