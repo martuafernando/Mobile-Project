@@ -30,7 +30,11 @@ public class SettingsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            binding.nightModeSwitch.setChecked(true);
+        }else{
+            binding.nightModeSwitch.setChecked(false);
+        }
 
         binding.nightModeSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
